@@ -14,7 +14,7 @@ let result: UrlStatus = {
   urlstatus: false,
 };
 
-isImageURL(url).then((isImage: boolean) => (result.urlstatus = isImage));
+result.urlstatus = await isImageURL(url);
 
 let output = { urlstatus: result };
 
